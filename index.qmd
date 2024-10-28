@@ -1,0 +1,413 @@
+---
+title: RchaeoStats
+subtitle: Open, online teaching materials for learning statistics with R
+format: 
+  revealjs: 
+    theme: theme.scss
+    css: styles.css
+    logo: images/hexsticker.png
+    self-contained: true
+    title-slide-attributes: 
+      data-background-image: images/hexsticker.png
+      data-background-position: "50% 98%"
+      data-background-size: "18%"
+---
+
+## What is it? {.smaller background-image="images/rchaeostats-screenshot.png" background-size="76%" background-position="50% 100%"}
+
+[rchaeology.github.io/RchaeoStats](https://rchaeology.github.io/RchaeoStats)
+
+
+## Motivation {.center}
+
+Asked to give workshop Deutsches Archäologisches Institut
+
+<br>
+
+Many (not all) of the archaeological teaching materials are focused on specific applications and
+University course materials
+
+(nice comprehensive list: [The didactic map of computational archaeology](https://sslarch.github.io/MapofComputationalArchaeology/))
+
+<br>
+
+Something I've wanted to do for a while!
+
+
+## Motivation {.center background-image="images/arch-languages.png" background-position="90% 50%" background-size="20%"}
+
+<i class="nf nf-seti-r"></i> seems to be popular in Archaeology
+
+::: {.footer}
+
+[Batist & Roe (2024). DOI: 10.11141/ia.67.13](https://doi.org/10.11141/ia.67.13)
+
+:::
+
+
+## Inspiration
+
+[Good enough practices in scientific computing](https://doi.org/10.1371/journal.pcbi.1005510) 
+(Wilson et al. 2017)
+
+- data management
+- project organisation
+- collaboration (project portability)
+
+[R for Data Science](https://r4ds.hadley.nz/) textbook
+
+Data Carpentry - [R for Social Scientists](https://datacarpentry.org/r-socialsci/)
+
+
+## Teaching philosophy
+
+Not meant to produce programmers and statisticians
+
+<br>
+
+Meant to enable researchers to confidently and reproducibly do their work in R
+
+<br>
+
+Programming concepts sparsely sprinkled throughout (as needed)
+
+
+## Teaching philosophy {.smaller}
+
+Code along
+
+- can't learn a programming language without doing
+
+"Time to first plot" - [Mine Cetinkaya-Rundel](https://github.com/mine-cetinkaya-rundel)
+
+- early 'wins'
+- keep learners motivated
+
+Frequent formative assessments (a.k.a execises)
+
+- helps manage the pace
+- feedback on comprehension (workshops)
+
+
+## Teaching philosophy
+
+tidyverse ecosystem mixed with some base R
+
+::: {.incremental}
+- gentlest entry to R (opinion!)
+- best-suited for data visualisations and analyses (fact-ish...)
+- best illustrations (fact!)
+:::
+
+## Teaching philosophy
+
+tidyverse ecosystem mixed with some base R
+
+- [gentlest entry to R (opinion!)]{style="color: rgb(0,0,0,0.1);"}
+- [best-suited for data visualisations and analyses (fact-ish...)]{style="color: rgb(0,0,0,0.1);"}
+- best illustrations (fact!)
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/97289f2d-010c-46fb-b567-5f8eb338d8df_rw_1920.png?h=034831e23bb6c5622b4308845616b2a7){.absolute top=40 right=0 fig-alt="A cartoon Delorean, with several fuzzy monsters dressed in lab coats pouring date-times into the flux capacitor, with one holding a lubridate cheatsheet. One fuzzy monster is flying on a hoverboard, dressed like Marty McFly from Back to the Future. Title text reads 'lubridate: time control!'' Learn more about lubridate."}
+
+::: {.footer}
+Artwork by [@allison_horst](https://twitter.com/allison_horst).
+:::
+
+
+## Teaching philosophy {.smaller}
+
+EDA > statistical tests
+
+Teach statistical concepts, not tests (but also tests...)
+
+::: {.incremental}
+- general linear models
+- p-values...
+  + [statistical significance]{.fragment .strike}
+  + [NHST]{.fragment .strike}
+  + continuous metric
+- confidence intervals
+- effect size
+- point/parameter estimates
+- practical implications (actual significance)
+:::
+
+![](https://i.imgflip.com/975264.jpg){.fragment .absolute right="0" top="20"}
+
+
+## Teaching philosophy
+
+Live coding during workshops
+
+::: {.incremental}
+- mirror learners' environment (RStudio with no customisation)
+- what, how, why, repeat.
+- explain errors (both intentional and unintentional)
+:::
+
+. . .
+
+Notes from workshops are hosted on [{{< fa brands github >}} GitHub](https://github.com/bbartholdy/RchaeoStats-workshop-notes) and
+
+. . .
+
+generated during the workshop with [gitautopush](https://github.com/choldgraf/gitautopush)
+
+. . .
+
+Central repo with new branch for each workshop
+
+
+## Modularity
+
+Make the materials as flexible and customisable as possible:
+
+::: {.incremental}
+- duration of course/workshop
+- target audience of workshop (beginners, intermediate, advanced)
+- field of research (bioarchaeology, neolithic, paleobotany, etc.)
+:::
+
+
+## Modularity {.smaller}
+
+### Current modules
+
+:::: {.columns}
+::: {.column}
+**Basics**
+
+- R basics
+- example workflow
+- Project organisation
+- Data cleaning
+:::
+::: {.column}
+**Exploratory Data Analysis (EDA)**
+
+- Visualising data
+- Transforming data
+
+**Communication**
+
+- Quarto document
+:::
+::::
+
+
+## Modularity {.smaller}
+
+![](/images/diagram-legend.png){.absolute width="140" right="20" top="20"}
+
+{{< include _module-flow.qmd >}}
+
+
+## Modularity {.smaller}
+
+:::: {.columns}
+::: {.column}
+
+### Beginners
+
+Brief workshop (ca. 2 hours)
+
+- R basics + Example workflow
+
+1-day workshop (max. 6 hours)
+
+- Basics
+
+2-day workshop
+
+- Basics + EDA
+- assignment 1
+
+4-day workshop
+
+- Basics + EDA + modelling + communicating
+- assignment 1 + 2
+
+
+:::
+::: {.column}
+
+### Advanced users
+
+1-day workshop (max. 6 hours)
+
+- cleaning + modelling (or topic-specific)
+
+2-day workshop
+
+- cleaning + modelling + topic-specific
+- assignment 1 + 2
+:::
+::::
+
+
+## Materials
+
+**Slides**
+
+- brief context for R(Studio) and Quarto
+- statistical concepts
+
+**Code-along materials**
+
+- step-by-step code with explanations
+- used by the instructor while teaching
+- can also be used for self-study
+
+
+## Materials {.smaller}
+
+`sheep-data.csv`
+
+Sheep astraguli data Mediterranean Iron Age.
+
+> The contribution of Mediterranean connectivity to morphological variability in Iron Age sheep of the Eastern Mediterranean Sierra A. Harding, Angelos Hadjikoumis, Shyama Vermeersch, Roee Shafir, Nimrod Marom. bioRxiv 2022.12.24.521859; https://doi.org/10.1101/2022.12.24.521859
+
+Accessed from: nmar79. (2023). nmar79/Med_Sheep_Astragals: v0.1 (v0.1). Zenodo. https://doi.org/10.5281/zenodo.10276147 (`sheep_specinfo_20230824.csv`)
+
+Modifications: removes missing values and variables that can be calculated from existing variables
+
+
+## Materials {.smaller}
+
+`mortuary-data.xlsx`
+
+Burial data from northeastern Taiwan ranging from the Iron Age through the European colonization period.
+
+> Li-Ying Wang & Ben Marwick, (2021). Compendium of R code and data for "A Bayesian networks approach to infer social changes from burials in northeastern Taiwan during the European colonization period". Online at <https://osf.io/xga6n/>
+
+Accessed from: <https://osf.io/zem9p> (Kiwulan_Burials.xlsx - burials sheet)
+
+Modifications: removes some variables that need cleaning (reduce cleaning complexity)
+
+
+## Assignments
+
+### Assignment 1: Case Study
+
+Finding, importing, cleaning, and exploring/analysing a dataset.
+
+1.1 Finding, importing, and cleaning
+
+1.2 Exploring
+
+1.3a Modelling (if modelling module is taught)
+
+1.3b Communicating (if communicating module is taught) 
+
+
+## Assignments
+
+### Assignment 2: Peer feedback
+
+Can someone else reproduce your analysis?
+
+Participants are paired up and need to reproduce each other's work
+
+Each participant produces a [CODECHECK](https://codecheck.org.uk)-style report
+
+- problems encountered
+- steps to solve problems
+
+Feedback is incorporated into own project
+
+If Git/GitHub is taught, this will be done via Git
+
+
+## Technical details {.center}
+
+Site is built with [Quarto](https://quarto.org)
+
+. . .
+
+R environment captured with the [renv]{.pkg} R package
+
+. . .
+
+Hosted on GitHub Pages
+
+- accessible via [rchaeology.github.io/RchaeoStats](https://rchaeology.github.io/RchaeoStats)
+- automated with GitHub Actions
+
+. . .
+
+Source code at [github.com/rchaeology/RchaeoStats](https://github.com/rchaeology/RchaeoStats)
+
+- releases [archived on Zenodo](https://doi.org/10.5281/zenodo.13983363)
+- versioning with [CalVer](https://calver.org/)
+
+## {.center}
+
+
+[F]{.larger} - Materials [archived on Zenodo](https://doi.org/10.5281/zenodo.13983363) [![10.5281/zenodo.13983363](https://zenodo.org/badge/DOI/10.5281/zenodo.13983363.svg)](https://doi.org/10.5281/zenodo.13983363)
+
+[A]{.larger} - Accessible online at [rchaeology.github.io/RchaeoStats](https://rchaeology.github.io/RchaeoStats)
+
+[I]{.larger} - Quarto and R (dependencies captured with [renv]{.pkg})
+
+[R]{.larger} - Open, permissive licenses for materials {{< fa brands creative-commons-zero >}} and data
+
+
+## Roadmap {.smaller}
+
+**Development of additional modules**
+
+:::: {.columns}
+::: {.column}
+
+EDA
+
+- correlations
+
+Modelling Data (in progress)
+
+Communication
+
+- Quarto manuscripts (with extensions), presentations
+- Quarto parametrised reports
+
+:::
+::: {.column}
+
+Research-specific modules
+
+- age-at-death and sex estimations
+- tidy dental data
+
+Version control and collaboration
+
+- <i class="nf nf-dev-git"></i> Git and {{< fa brands github >}} GitHub
+
+:::
+::::
+
+<br>
+Better integration between the statistics and coding
+
+To **tidymodels** or not to **tidymodels**?
+
+
+## What now? {.center}
+
+Need community to contribute topic-specific modules (other contributions are welcome)
+
+- dendrochronology
+- radiocarbon dating (and others)
+- more
+
+More iterations to improve existing materials
+
+
+## Acknowledgements {.center}
+
+![](https://www.dainst.org/typo3conf/ext/wfdaiwebsite/Resources/Public/Images/basic/dai-logo.png)
+
+Also thanks to early test subjects at Österreichische Archäologische Institut
+
+## Thank you! {.center}
+
+Join us at [UnArchaeology.nl](https://unarchaeology.nl) 7th (and 8th) November in Leiden!

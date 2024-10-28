@@ -1,0 +1,57 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+$green: #86cb9b;
+$navy: #1f2241;
+
+// colours from randoma11y
+$grey: #56615f;
+$darkgrey: #3f4745;
+$yellow: #eae36d;
+$green2: #26f581;
+$lightblue: #a0f3e5;
+$greenishblue: #bcddcd;
+$lightgrey: #e3e3e3;
+$pink: #aa1071;
+$purple: #620637;
+$orange: #f06633;
+$eggshell: #fdffc6;
+$white: #fffffa;
+// document colours
+
+$body-bg: $purple;
+
+$body-color: $white;
+$link-color: $orange;
+
+
+
+//document typeface
+$presentation-heading-color: $lightgrey;
+$font-family-sans-serif: "Atkinson Hyperlegible";
+
+// Mermaid diagrams
+$mermaid-bg-color: black;
+$mermaid-edge-color: blue;
+$mermaid-node-fg-color: green;
+$mermaid-fg-color: red;
+$mermaid-fg-color--lighter: lighten(red, 10%);
+$mermaid-fg-color--lightest: lighten(red, 20%);
+//$mermaid-font-family: $font-family-sans-serif;
+$mermaid-label-bg-color: purple;
+$mermaid-label-fg-color: white;
+$mermaid-node-bg-color: rgba(orange, 0.1);
+$mermaid-node-fg-color: orange;
+
+/*-- scss:rules --*/
+
+.cell {
+    margin-bottom: 32px;
+}
+
+
+.sidebar-item {
+    color: white;
+}

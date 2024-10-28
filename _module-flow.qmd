@@ -1,0 +1,31 @@
+```{dot}
+digraph D {
+
+  node [shape=record fontname="Sans serif" fontsize="8"];
+
+  mat_basic [ label="R basics"];
+  mat_workflow [ label="Ex workflow"];
+  mat_project [ label="Project org"];
+  mat_clean [ label="Cleaning data"];
+  mat_viz [ label="Visualising data"];
+  mat_transform [ label="Transforming data"];
+  mat_comm [ label="Communicating results"];
+  mat_model [ label="Modelling data"];
+
+  subgraph cluster0 {
+    node [style=filled color=white]
+    mat_viz -> mat_transform [color=grey arrowhead=olnormal]
+    mat_model
+  }
+
+  mat_basic -> mat_workflow [color=grey arrowhead=olnormal];
+  mat_basic -> mat_project [color=grey arrowhead=olnormal];
+  mat_project -> mat_clean [arrowhead=rnormal];
+  mat_clean -> mat_viz;
+  mat_transform -> mat_comm [color=grey arrowhead=olnormal]
+  mat_model -> mat_comm [color=grey arrowhead=olnormal]
+  mat_clean -> mat_comm
+  mat_viz -> mat_model [color=grey arrowhead=olnormal]
+
+}
+```
